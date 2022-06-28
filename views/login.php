@@ -1,13 +1,7 @@
 <div class="card">
-    <div class="card-header bg-black text-white">Contact Us</div>
+    <div class="card-header bg-black text-white">Login</div>
     <div class="card-body">
         <form action="" method="post">
-            <div class="mb-3 row">
-                <label>Subject</label>
-                <div>
-                    <input type="text" name="subject" class="form-control">
-                </div>
-            </div>
             <div class="mb-3 row">
                 <label>Email</label>
                 <div>
@@ -15,9 +9,9 @@
                 </div>
             </div>
             <div class="mb-3 row">
-                <label>Body</label>
+                <label>Password</label>
                 <div>
-                    <textarea name="body" class="form-control"></textarea>
+                    <input type="password" name="password" class="form-control">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>

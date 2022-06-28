@@ -27,11 +27,19 @@
                         <a class="nav-link text-white" href="/contact">Contact</a>
                     </li>
                 </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/register">Register</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-3">
+    <div class="container mt-3 w-50">
     {{ content }}
     </div>
 
