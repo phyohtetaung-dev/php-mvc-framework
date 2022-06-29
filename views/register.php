@@ -1,38 +1,13 @@
 <div class="card">
     <div class="card-header bg-black text-white">Create an account</div>
     <div class="card-body">
-        <form action="" method="post">
-            <div class="mb-3 row">
-                <label>First Name</label>
-                <div>
-                    <input type="text" name="firstname" class="form-control">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label>Last Name</label>
-                <div>
-                    <input type="text" name="lastname" class="form-control">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label>Email</label>
-                <div>
-                    <input type="email" name="email" class="form-control">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label>Password</label>
-                <div>
-                    <input type="password" name="password" class="form-control">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label>Confirm Password</label>
-                <div>
-                    <input type="password" name="confirmPassword" class="form-control">
-                </div>
-            </div>
+        <?php $form = app\core\form\Form::begin('', 'post')?>
+            <?php echo $form->field($model, 'firstname') ?>
+            <?php echo $form->field($model, 'lastname') ?>
+            <?php echo $form->field($model, 'email') ?>
+            <?php echo $form->field($model, 'password')->passwordField() ?>
+            <?php echo $form->field($model, 'confirmPassword')->passwordField() ?>
             <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <?php app\core\form\Form::end()?>
     </div>
 </div>

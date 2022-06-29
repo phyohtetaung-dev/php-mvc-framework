@@ -6,5 +6,7 @@
 4. call_user_func
 5. filter_input
 6. filter_var
+7. sprintf
+8. __toString
 
 # Others
