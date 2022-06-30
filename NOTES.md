@@ -1,4 +1,6 @@
-# Essential Functions
+# Essential Notes
+
+## Functions
 
 1. include vs require
 2. include_once vs require_once
@@ -8,5 +10,13 @@
 6. filter_var
 7. sprintf
 8. __toString
+9. dirname
+10. scandir
+11. array_diff
+12. pathinfo
+13. array_map
 
-# Others
+## Others
+
+1. PDO
+2. PHP_EOL

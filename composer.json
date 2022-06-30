@@ -6,5 +6,8 @@
         "files": [
             "./helpers.php"
         ]
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
     }
 }
