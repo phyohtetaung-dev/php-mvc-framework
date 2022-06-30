@@ -23,3 +23,4 @@
 2. PHP_EOL
 3. self::class
 4. Objects and references (https://www.php.net/manual/en/language.oop5.references.php#:~:text=A%20PHP%20reference%20is%20an,to%20find%20the%20actual%20object.)
+5. Scope Resolution Operator(::) (https://www.php.net/manual/en/language.oop5.paamayim-nekudotayim.php)
