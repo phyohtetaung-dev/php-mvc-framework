@@ -3,12 +3,14 @@
 use app\controllers\AuthController;
 use app\controllers\SiteController;
 use app\core\Application;
+use app\models\User;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
 $config = [
+    'userClass' => User::class,
     'db' => [
         'DB_DSN' => $_ENV['DB_DSN'],
         'DB_USER' => $_ENV['DB_USER'],

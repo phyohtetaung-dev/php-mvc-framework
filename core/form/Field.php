@@ -38,7 +38,7 @@ class Field
             $this->type,
             $this->attribute,
             $this->model->{$this->attribute},
-            $this->model->hasError('firstname') ? 'is-invalid' : '',
+            $this->model->hasError($this->attribute) ? 'is-invalid' : '',
             $this->model->getFirstError($this->attribute)
         );
     }
