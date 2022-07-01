@@ -1,7 +1,7 @@
 {
     "autoload": {
         "psr-4": {
-            "app\\": "./"
+            "app\\": "."
         },
         "files": [
             "./helpers.php"
@@ -9,6 +9,6 @@
     },
     "require": {
         "vlucas/phpdotenv": "^5.4",
-        "phyohtetaung/php-mvc-core": "dev-main"
+        "phyohtetaung/php-mvc-core": "^v1.0.0"
     }
 }
