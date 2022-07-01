@@ -29,6 +29,6 @@ $app->router->get('/profile', [AuthController::class, 'profile']);
 
 $app->router->get('/', [SiteController::class, 'home']);
 $app->router->get('/contact', [SiteController::class, 'contact']);
-$app->router->post('/contact', [SiteController::class, 'handleContact']);
+$app->router->post('/contact', [SiteController::class, 'contact']);
 
 $app->run();

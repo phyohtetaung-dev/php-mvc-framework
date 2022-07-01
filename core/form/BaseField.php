@@ -4,22 +4,18 @@ namespace app\core\form;
 
 use app\core\Model;
 
-class Field
+abstract class BaseField
 {
-    public const TYPE_TEXT = 'text';
-    public const TYPE_NUMBER = 'number';
-    public const TYPE_PASSWORD = 'password';
-
     public $model;
     public $attribute;
-    public $type;
 
     public function __construct(Model $model, $attribute)
     {
         $this->model = $model;
         $this->attribute = $attribute;
-        $this->type = self::TYPE_TEXT;
     }
+
+    abstract public function renderInput(): string;
 
     public function __toString()
     {
@@ -27,7 +23,7 @@ class Field
             <div class="mb-3 row">
                 <label>%s</label>
                 <div>
-                    <input type="%s" name="%s" value="%s" class="form-control %s">
+                    %s
                     <div class="invalid-feedback">
                         %s
                     </div>
@@ -35,16 +31,8 @@ class Field
             </div>
         ',
             $this->model->getLabel($this->attribute),
-            $this->type,
-            $this->attribute,
-            $this->model->{$this->attribute},
-            $this->model->hasError($this->attribute) ? 'is-invalid' : '',
+            $this->renderInput(),
             $this->model->getFirstError($this->attribute)
         );
-    }
-    
-    public function passwordField() {
-        $this->type = self::TYPE_PASSWORD;
-        return $this;
     }
 }
