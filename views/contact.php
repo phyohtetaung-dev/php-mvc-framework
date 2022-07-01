@@ -1,3 +1,8 @@
+<?php
+/** @var $this \app\core\View */
+$this->title = 'Contact';
+?>
+
 <div class="card">
     <div class="card-header bg-black text-white">Contact Us</div>
     <div class="card-body">
