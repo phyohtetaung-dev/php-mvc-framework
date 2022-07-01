@@ -1,6 +1,6 @@
 <?php
-    /** @var $model \app\models\User */
-    use app\core\form\Form;
+/** @var $model \app\models\User */
+use app\core\form\Form;
 ?>
 <div class="card">
     <div class="card-header bg-black text-white">Create an account</div>
@@ -12,6 +12,7 @@
             <?php echo $form->field($model, 'password')->passwordField() ?>
             <?php echo $form->field($model, 'confirmPassword')->passwordField() ?>
             <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="/login" class="ms-1">Already have an account?</a>
         <?php Form::end()?>
     </div>
 </div>

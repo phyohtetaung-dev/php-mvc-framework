@@ -6,6 +6,7 @@ class Application
 {
     public static $ROOT_DIR; // string
 
+    public $layout = 'main'; // string
     public $userClass; // string
     public $router; // Router
     public $request; // Request
@@ -38,7 +39,14 @@ class Application
 
     public function run()
     {
-        echo $this->router->resolve();
+        try {
+            echo $this->router->resolve();
+        } catch (\Exception $e) {
+            $this->response->setStatusCode($e->getCode());
+            echo $this->router->renderView('_error', [
+                'exception' => $e,
+            ]);
+        }
     }
 
     public function getController()
