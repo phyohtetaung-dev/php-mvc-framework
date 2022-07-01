@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6535dd32cf28e7080321a8cc1fe2a17f",
+    "content-hash": "3a7e5c30d58351c9ccc0f5d81fffcd76",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -138,6 +138,40 @@
                 }
             ],
             "time": "2021-12-04T23:24:31+00:00"
+        },
+        {
+            "name": "phyohtetaung/php-mvc-core",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phyohtetaung-dev/php-mvc-core.git",
+                "reference": "56e096141c2ee972b2d3429fc99a99f7e4f53b61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phyohtetaung-dev/php-mvc-core/zipball/56e096141c2ee972b2d3429fc99a99f7e4f53b61",
+                "reference": "56e096141c2ee972b2d3429fc99a99f7e4f53b61",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phyohtetaung\\phpmvc\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "phyohtetaung-dev",
+                    "email": "phyohtetaung.dev.29@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/phyohtetaung-dev/php-mvc-core/issues",
+                "source": "https://github.com/phyohtetaung-dev/php-mvc-core/tree/v1.0.0"
+            },
+            "time": "2022-07-01T15:06:46+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -471,7 +505,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "phyohtetaung/php-mvc-core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

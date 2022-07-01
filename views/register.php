@@ -1,6 +1,6 @@
 <?php
 /** @var $model \app\models\User */
-use app\core\form\Form;
+use phyohtetaung\phpmvc\form\Form;
 ?>
 <div class="card">
     <div class="card-header bg-black text-white">Create an account</div>

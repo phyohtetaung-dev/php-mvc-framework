@@ -2,7 +2,7 @@
 
 use app\controllers\AuthController;
 use app\controllers\SiteController;
-use app\core\Application;
+use phyohtetaung\phpmvc\Application;
 use app\models\User;
 
 require_once __DIR__ . '/../vendor/autoload.php';

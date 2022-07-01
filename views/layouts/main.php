@@ -1,5 +1,5 @@
 <?php
-use app\core\Application;
+use phyohtetaung\phpmvc\Application;
 ?>
 
 <!doctype html>

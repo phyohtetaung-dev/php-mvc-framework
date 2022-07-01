@@ -2,8 +2,8 @@
 
 namespace app\models;
 
-use app\core\Application;
-use app\core\Model;
+use phyohtetaung\phpmvc\Application;
+use phyohtetaung\phpmvc\Model;
 use app\models\User;
 
 class LoginForm extends Model

@@ -1,9 +1,9 @@
 <?php
-/** @var $this \app\core\View */
+/** @var $this \phyohtetaung\phpmvc\View */
 /** @var $this \app\models\ContactForm */
 
-use app\core\form\Form;
-use app\core\form\TextareaField;
+use phyohtetaung\phpmvc\form\Form;
+use phyohtetaung\phpmvc\form\TextareaField;
 
 $this->title = 'Contact';
 ?>
