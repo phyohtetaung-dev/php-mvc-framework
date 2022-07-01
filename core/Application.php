@@ -5,7 +5,7 @@ namespace app\core;
 class Application
 {
     public static $ROOT_DIR; // string
-    
+
     public $userClass; // string
     public $router; // Router
     public $request; // Request
@@ -60,8 +60,14 @@ class Application
         return true;
     }
 
-    public function logout() {
+    public function logout()
+    {
         $this->user = null;
         $this->session->remove('user');
+    }
+
+    public static function isGuest()
+    {
+        return !self::$app->user;
     }
 }

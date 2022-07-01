@@ -2,9 +2,9 @@
 
 namespace app\models;
 
-use app\core\DbModel;
+use app\core\UserModel;
 
-class User extends DbModel
+class User extends UserModel
 {
     const STATUS_INACTIVE = 0;
     const STATUS_ACTIVE = 1;
@@ -40,7 +40,7 @@ class User extends DbModel
             'firstname' => [self::RULE_REQUIRED],
             'lastname' => [self::RULE_REQUIRED],
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL, [
-                self::RULE_UNIQUE, 'class' => self::class
+                self::RULE_UNIQUE, 'class' => self::class,
             ]],
             'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 8], [self::RULE_MAX, 'max' => 24]],
             'confirmPassword' => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']],
@@ -54,17 +54,23 @@ class User extends DbModel
             'lastname',
             'email',
             'password',
-            'status'
+            'status',
         ];
     }
 
-    public function labels(): array {
+    public function labels(): array
+    {
         return [
             'firstname' => 'First name',
             'lastname' => 'Last name',
             'email' => 'Email',
             'password' => 'Password',
-            'confirmPassword' => 'Confirm Password'
+            'confirmPassword' => 'Confirm Password',
         ];
+    }
+
+    public function getDisplayName(): string
+    {
+        return $this->firstname . ' ' . $this->lastname;
     }
 }

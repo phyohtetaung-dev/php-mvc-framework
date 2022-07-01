@@ -14,8 +14,8 @@ $config = [
     'db' => [
         'DB_DSN' => $_ENV['DB_DSN'],
         'DB_USER' => $_ENV['DB_USER'],
-        'DB_PASSWORD' => $_ENV['DB_PASSWORD']
-    ]
+        'DB_PASSWORD' => $_ENV['DB_PASSWORD'],
+    ],
 ];
 
 $app = new Application(dirname(__DIR__), $config);
@@ -24,6 +24,7 @@ $app->router->get('/login', [AuthController::class, 'login']);
 $app->router->post('/login', [AuthController::class, 'login']);
 $app->router->get('/register', [AuthController::class, 'register']);
 $app->router->post('/register', [AuthController::class, 'register']);
+$app->router->get('/logout', [AuthController::class, 'logout']);
 
 $app->router->get('/', [SiteController::class, 'home']);
 $app->router->get('/contact', [SiteController::class, 'contact']);
