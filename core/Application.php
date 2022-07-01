@@ -2,6 +2,9 @@
 
 namespace app\core;
 
+use app\core\db\Database;
+use app\core\db\DbModel;
+
 class Application
 {
     public static $ROOT_DIR; // string
@@ -13,7 +16,7 @@ class Application
     public $response; // Response
     public $session; // Session
     public $db; // Database
-    public $user; // DbModel
+    public $user; // UserModel
     public $view; // View
 
     public static $app; // Application
