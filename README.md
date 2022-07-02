@@ -19,4 +19,4 @@ Relate core package: https://github.com/phyohtetaung-dev/php-mvc-core
 
 ## Project Structure
 
-[project structure img] (https::/github.com/phyohtetaung-dev/php-mvc-framework/public/images/project-structure.jpg)
+![project structure img](https://github.com/phyohtetaung-dev/php-mvc-framework/blob/main/public/images/project-structure.jpg)
