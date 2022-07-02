@@ -16,6 +16,8 @@
 - ob_get_clean() essentially executes both ob_get_contents() and ob_end_clean().
 
 ```php
+<?php
+
 protected function renderOnlyView($view, $params)
 {
     foreach ($params as $key => $value) {
@@ -33,23 +35,25 @@ Example 1
 
 ```php
 <?php
-    $func = "str_replace";
-    $output_single = call_user_func($func, "monkeys", "giraffes", "Hundreds and thousands of monkeys\n");
-    echo $output_single; // Hundreds and thousands of giraffes
-?>
+
+$func = "str_replace";
+$output_single = call_user_func($func, "monkeys", "giraffes", "Hundreds and thousands of monkeys\n");
+
+echo $output_single; // Hundreds and thousands of giraffes
 ```
 
 Example 2
 
 ```php
 <?php
-   function func($a, $b){
-       echo $a."\r\n";
-       echo $b."\r\n";
-   }
-    // The first one is the function name, followed by the parameter list
-    call_user_func("func", 1, 2); // 1, 2
-?>
+
+function func($a, $b){
+    echo $a."\r\n";
+    echo $b."\r\n";
+}
+
+// The first one is the function name, followed by the parameter list
+call_user_func("func", 1, 2); // 1, 2
 ```
 
 ### 4. filter_input (form input)
@@ -58,12 +62,12 @@ Example 2
 
 ```php
 <?php
-    $data = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-    if($data) {
-        echo $data;
-    }
-    else echo "Data was empty.";
-?>
+
+$data = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+if($data) {
+    echo $data;
+}
+else echo "Data was empty.";
 ```
 
 ### 5. filter_var
@@ -72,9 +76,9 @@ Example 2
 
 ```php
 <?php
-    $input = "<script>alert('Check this');</script>"
-    echo filter_var($input, FILTER_SANITIZE_STRIPED);
-?>
+
+$input = "<script>alert('Check this');</script>"
+echo filter_var($input, FILTER_SANITIZE_STRIPED);
 ```
 
 ### 6. sprintf
@@ -83,11 +87,12 @@ Example 2
 
 ```php
 <?php
-    $number = 9;
-    $str = "Beijing";
-    $txt = sprintf("There are %u million bicycles in %s.",$number,$str);
-    echo $txt; // There are 9 million bicycles in Beijing.
-?>
+
+$number = 9;
+$str = "Beijing";
+$txt = sprintf("There are %u million bicycles in %s.",$number,$str);
+
+echo $txt; // There are 9 million bicycles in Beijing.
 ```
 
 ### 7. \_\_toString
@@ -101,10 +106,10 @@ Example 2
 
 ```php
 <?php
-    echo dirname("c:/testweb/home.php"); // c:/testweb/
-    echo dirname("c:/testweb/home.php", 2); // c:
-    echo dirname("/testweb/home.php"); // testweb
-?>
+
+echo dirname("c:/testweb/home.php"); // c:/testweb/
+echo dirname("c:/testweb/home.php", 2); // c:
+echo dirname("/testweb/home.php"); // testweb
 ```
 
 ### 9. scandir
@@ -118,12 +123,12 @@ Example 2
 
 ```php
 <?php
-    $array1 = array("a" => "green", "red", "blue", "red");
-    $array2 = array("b" => "green", "yellow", "red");
-    $result = array_diff($array1, $array2);
 
-    print_r($result); // Array ( [1] => blue )
-?>
+$array1 = array("a" => "green", "red", "blue", "red");
+$array2 = array("b" => "green", "yellow", "red");
+$result = array_diff($array1, $array2);
+
+print_r($result); // Array ( [1] => blue )
 ```
 
 ### 11. pathinfo
@@ -132,18 +137,19 @@ Example 2
 
 ```php
 <?php
-    pathinfo(dirname(__DIR__));
-    // Output
-    array(3) {
-      ["dirname"]=>
-      string(22) "C:\Users\Admin\Desktop"
-      ["basename"]=>
-      string(17) "php-mvc-framework"
-      ["filename"]=>
-      string(17) "php-mvc-framework"
-      ["extension"]=> // if it is file
-    }
-?>
+
+pathinfo(dirname(__DIR__));
+
+// Output
+array(3) {
+    ["dirname"]=>
+    string(22) "C:\Users\Admin\Desktop"
+    ["basename"]=>
+    string(17) "php-mvc-framework"
+    ["filename"]=>
+    string(17) "php-mvc-framework"
+    ["extension"]=> // if it is file
+}
 ```
 
 ### 12. array_map
@@ -152,14 +158,15 @@ Example 2
 
 ```php
 <?php
-    function myfunction($v)
-    {
-        return($v * $v);
-    }
 
-    $a = array(1, 2, 3, 4, 5);
-    print_r(array_map("myfunction", $a)); // Array ( [0] => 1 [1] => 4 [2] => 9 [3] => 16 [4] => 25 )
-?>
+function myfunction($v)
+{
+    return($v * $v);
+}
+
+$a = array(1, 2, 3, 4, 5);
+
+print_r(array_map("myfunction", $a)); // Array ( [0] => 1 [1] => 4 [2] => 9 [3] => 16 [4] => 25 )
 ```
 
 ### 13. unset
@@ -168,13 +175,13 @@ Example 2
 
 ```php
 <?php
-    $a = "Hello world!";
-    echo "The value of variable 'a' before unset: " . $a . "<br>";
-    // The value of variable 'a' before unset: Hello world!
-    unset($a);
-    echo "The value of variable 'a' after unset: " . $a;
-    // The value of variable 'a' after unset:
-?>
+
+$a = "Hello world!";
+echo "The value of variable 'a' before unset: " . $a . "<br>";
+// The value of variable 'a' before unset: Hello world!
+unset($a);
+echo "The value of variable 'a' after unset: " . $a;
+// The value of variable 'a' after unset:
 ```
 
 ## Others
@@ -230,6 +237,4 @@ demo::func();
 
 // Calling for child's version of func()
 Child::func();
-
-?>
 ```
