@@ -1,5 +1,10 @@
 # Essential Notes
 
+---
+
+1. [Functions](#function)
+2. [Others](#others)
+
 ## Functions
 
 ---
@@ -31,7 +36,7 @@ protected function renderOnlyView($view, $params)
 
 ### 3. call_user_func
 
-Example 1
+#### Example 1
 
 ```php
 <?php
@@ -42,7 +47,7 @@ $output_single = call_user_func($func, "monkeys", "giraffes", "Hundreds and thou
 echo $output_single; // Hundreds and thousands of giraffes
 ```
 
-Example 2
+#### Example 2
 
 ```php
 <?php
@@ -217,7 +222,6 @@ echo "The value of variable 'a' after unset: " . $a;
 
 // Declaring parent class
 class demo {
-
     public static $bar = 10;
 
     public static function func() {
