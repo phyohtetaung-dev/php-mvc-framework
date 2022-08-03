@@ -1,6 +1,6 @@
 # PHP MVC Framework
 
-Relate core package: https://github.com/phyohtetaung-dev/php-mvc-core
+Related core package: https://github.com/phyohtetaung-dev/php-mvc-core
 
 ---
 
